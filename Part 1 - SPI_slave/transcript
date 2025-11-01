@@ -1,0 +1,3178 @@
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# OpenFile {F:/MOHAMMED ESSAM/Digital/verification/projects/UVM Project/SPI_slave/SPI_slave.mpf}
+# Loading project SPI_slave
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 22:44:44 on Oct 14,2025
+# vlog -reportprogress 300 "+define+SIM" "+cover" SPI_Slave_Golden.sv SPI_slave.sv SPI_slave_agent.sv SPI_slave_config.sv SPI_slave_coverage.sv SPI_slave_driver.sv SPI_slave_env.sv SPI_slave_if.sv SPI_slave_main_seq.sv SPI_slave_monitor.sv SPI_slave_rst_seq.sv SPI_slave_scoreboard.sv SPI_slave_seq_item.sv SPI_slave_sequencer.sv SPI_slave_shared.sv SPI_slave_sva.sv SPI_slave_test.sv XXX_uvm_env_template.sv top.sv 
+# -- Compiling module SPI_Slave_Golden
+# -- Compiling module SLAVE
+# -- Compiling package SPI_slave_agent_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) SPI_slave_agent.sv(3): Using implicit +incdir+F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package SPI_slave_config_pkg
+# -- Importing package SPI_slave_driver_pkg
+# -- Importing package SPI_slave_seq_item_pkg
+# -- Importing package SPI_slave_shared_pkg
+# -- Importing package SPI_slave_monitor_pkg
+# -- Importing package SPI_slave_sequencer_pkg
+# -- Compiling package SPI_slave_config_pkg
+# -- Compiling package SPI_slave_coverage_pkg
+# -- Compiling package SPI_slave_driver_pkg
+# -- Compiling package SPI_slave_env_pkg
+# -- Importing package SPI_slave_agent_pkg
+# -- Importing package SPI_slave_scoreboard_pkg
+# -- Importing package SPI_slave_coverage_pkg
+# -- Compiling interface SPI_slave_if
+# -- Compiling package SPI_slave_main_seq_pkg
+# -- Compiling package SPI_slave_monitor_pkg
+# -- Compiling package SPI_slave_rst_seq_pkg
+# -- Compiling package SPI_slave_scoreboard_pkg
+# -- Compiling package SPI_slave_seq_item_pkg
+# -- Compiling package SPI_slave_sequencer_pkg
+# -- Compiling package SPI_slave_shared_pkg
+# -- Compiling package SPI_slave_sva_sv_unit
+# -- Compiling module SPI_slave_sva
+# -- Compiling package SPI_slave_test_pkg
+# -- Importing package SPI_slave_env_pkg
+# -- Importing package SPI_slave_main_seq_pkg
+# -- Importing package SPI_slave_rst_seq_pkg
+# -- Compiling package top_sv_unit
+# -- Importing package SPI_slave_test_pkg
+# -- Compiling module top
+# 
+# Top level modules:
+# 	SPI_slave_sva
+# 	top
+# End time: 22:44:45 on Oct 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.top -classdebug -uvmcontrol=all 
+# Start time: 22:44:45 on Oct 14,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.SPI_slave_if(fast)
+# Loading work.SPI_slave_shared_pkg(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.SPI_slave_seq_item_pkg(fast)
+# Loading work.SPI_slave_rst_seq_pkg(fast)
+# Loading work.SPI_slave_main_seq_pkg(fast)
+# Loading work.SPI_slave_coverage_pkg(fast)
+# Loading work.SPI_slave_scoreboard_pkg(fast)
+# Loading work.SPI_slave_sequencer_pkg(fast)
+# Loading work.SPI_slave_monitor_pkg(fast)
+# Loading work.SPI_slave_config_pkg(fast)
+# Loading work.SPI_slave_driver_pkg(fast)
+# Loading work.SPI_slave_agent_pkg(fast)
+# Loading work.SPI_slave_env_pkg(fast)
+# Loading work.SPI_slave_test_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.SPI_slave_if(fast__2)
+# Loading work.SPI_Slave_Golden(fast)
+# Loading work.SLAVE(fast)
+# Loading F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d\win64\uvm_dpi.dll
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(all)
+# UVM_INFO @ 0: reporter [RNTST] Running test SPI_slave_test...
+# UVM_INFO SPI_slave_coverage.sv(50) @ 0: uvm_test_top.env.cov [coverage] coverage build_phase
+# UVM_INFO SPI_slave_test.sv(39) @ 0: uvm_test_top [RUN_PHASE] Starting reset sequence
+# **************************************************************************
+# * Questa UVM Transaction Recording Turned ON.                            *
+# * recording_detail has been set.                                         *
+# *  To turn off, set 'recording_detail' to off:                           *
+# * uvm_config_db#(int)            ::set(null, "", "recording_detail", 0); *
+# * uvm_config_db#(uvm_bitstream_t)::set(null, "", "recording_detail", 0); *
+# **************************************************************************
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 10: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_test.sv(42) @ 10: uvm_test_top [RUN_PHASE] Starting main sequence
+# temp_MO_data=0 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 20: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 30: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 40: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 50: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 60: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 70: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 80: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 90: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 100: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 110: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 120: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 130: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 140: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 150: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 150: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 160: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 160: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 170: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 170: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 180: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 180: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 190: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 190: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 200: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 200: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 210: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 210: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 220: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 220: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 230: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 230: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=22
+# cycle_count=22  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 240: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 240: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=23
+# cycle_count=23  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 250: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 250: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 260: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 260: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 270: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 280: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 290: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 300: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 310: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 320: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 330: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 340: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 350: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 360: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 370: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 380: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 390: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 390: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: a5
+# temp_MO_data=a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 400: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 400: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: a5
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 410: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 420: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 430: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 440: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 450: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 460: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 470: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 480: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 490: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 500: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 510: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 520: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 530: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 530: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 540: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 540: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=7a5 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 550: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 560: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 570: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 580: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 590: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 600: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 610: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=22
+# cycle_count=22  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 620: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=23
+# cycle_count=23  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 630: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 640: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 650: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 660: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 670: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 680: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 690: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 700: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 710: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 720: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 730: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 740: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 750: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 760: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 770: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 780: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 790: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 800: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 810: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 810: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 820: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 820: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 830: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 830: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 840: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 840: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 850: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 850: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 860: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 860: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 870: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 870: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 880: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 880: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 890: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 890: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=22
+# cycle_count=22  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 900: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 900: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=23
+# cycle_count=23  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 910: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 910: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 920: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 920: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=0 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 930: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 940: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 950: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 960: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 970: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 980: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 990: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1000: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1010: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1020: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1030: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1040: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1050: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1060: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1070: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1080: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1090: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 1090: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1100: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 1100: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1110: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 1110: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1120: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 1120: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1130: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 1130: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1140: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1150: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1160: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1170: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1180: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1190: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1200: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1210: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1220: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1230: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1240: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1250: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1260: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1270: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1280: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 1280: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: ff
+# temp_MO_data=ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1290: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 1290: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: ff
+# temp_MO_data=1ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1300: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1310: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1320: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1330: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1340: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1350: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1360: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1370: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1380: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1390: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1400: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1410: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1420: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1430: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1440: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1450: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1460: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1470: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1480: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1490: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1500: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1510: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1520: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1530: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1540: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1550: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1560: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1570: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1580: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1590: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1600: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1610: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1620: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1630: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1640: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1650: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1660: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1670: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1680: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 1680: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 0
+# temp_MO_data=0 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1690: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 1690: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 0
+# temp_MO_data=7ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1700: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1710: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1720: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1730: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1740: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1750: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1760: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1770: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1780: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1790: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1800: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1810: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1820: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1830: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1840: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1850: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1860: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1870: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1880: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1890: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1900: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1910: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1920: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1930: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1940: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1950: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1960: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 1960: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=6a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1970: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 1970: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1980: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 1990: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2000: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2010: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2020: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2030: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2040: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2050: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2060: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2070: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2080: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2090: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2100: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 2100: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2110: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 2110: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=7a5 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2120: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2130: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2140: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2150: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2160: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2170: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2180: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=22
+# cycle_count=22  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2190: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=23
+# cycle_count=23  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2200: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2210: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 2210: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=600 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2220: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2230: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2240: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2250: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2260: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2270: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2280: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2290: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2300: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2310: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2320: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2330: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2340: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 2340: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 200
+# temp_MO_data=600 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2350: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 2350: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 200
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2360: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2370: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2380: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2390: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2400: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2410: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2420: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2430: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2440: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2450: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2460: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2470: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2480: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2490: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2500: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2510: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2520: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2530: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2540: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2550: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2560: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2570: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 2570: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1a5
+# temp_MO_data=1a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2580: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 2580: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1a5
+# temp_MO_data=ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2590: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2600: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2610: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2620: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2630: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2640: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2650: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2660: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2670: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2680: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2690: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2700: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2710: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 2710: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: ff
+# temp_MO_data=ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2720: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 2720: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: ff
+# temp_MO_data=7ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2730: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2740: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2750: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2760: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2770: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2780: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2790: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2800: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2810: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2820: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2830: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2840: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2850: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2860: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2870: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2880: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2890: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2900: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2910: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2920: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2930: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2940: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2950: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2960: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2970: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2980: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 2990: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 2990: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 0
+# temp_MO_data=0 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3000: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3000: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 0
+# temp_MO_data=700 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3010: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3020: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3030: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3040: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3050: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3060: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3070: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3080: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3090: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3100: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3110: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3120: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3130: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3130: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3140: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3140: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3150: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3150: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3160: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3160: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3170: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3170: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3180: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3180: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3190: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3190: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3200: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3200: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3210: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3210: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=22
+# cycle_count=22  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3220: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3220: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=23
+# cycle_count=23  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3230: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3230: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=700 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3240: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3240: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 300
+# temp_MO_data=a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3250: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3260: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3270: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3280: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3290: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3300: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3310: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3320: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3330: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3340: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3350: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3360: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3370: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3380: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3390: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3400: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3400: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3410: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3410: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3420: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3420: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3430: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3430: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3440: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3440: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3450: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3450: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3460: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3460: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3470: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3470: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3480: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3480: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=22
+# cycle_count=22  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3490: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3490: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=23
+# cycle_count=23  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3500: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3500: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3510: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3510: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=600 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3520: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3530: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3540: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3550: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3560: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3570: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3580: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3590: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3600: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3610: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3620: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3630: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3640: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3640: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 200
+# temp_MO_data=600 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3650: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3650: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 200
+# temp_MO_data=7ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3660: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3670: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3680: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3690: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3700: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3710: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3720: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3730: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3740: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3750: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3760: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3770: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3780: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3780: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3ff
+# temp_MO_data=7ff cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3790: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3790: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2ff
+# temp_MO_data=7ff cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3800: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3810: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3820: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3830: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3840: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3850: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3860: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=22
+# cycle_count=22  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3870: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=23
+# cycle_count=23  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3880: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3890: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 3890: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2ff
+# temp_MO_data=600 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3900: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3910: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3920: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3930: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3940: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3950: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3960: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3970: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3980: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 3990: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4000: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4010: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4020: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 4020: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 200
+# temp_MO_data=600 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4030: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 4030: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 200
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4040: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4050: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4060: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4070: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4080: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4090: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4100: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4110: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4120: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4130: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4140: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4150: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4160: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4170: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4180: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4190: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4200: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4210: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4220: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 4220: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=6a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4230: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 4230: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=100 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4240: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4250: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4260: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4270: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4280: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4290: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4300: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4310: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4320: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4330: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4340: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4350: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4360: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 4360: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 100
+# temp_MO_data=100 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4370: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 4370: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 100
+# temp_MO_data=a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4380: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4390: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4400: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4410: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4420: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4430: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4440: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4450: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4460: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4470: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4480: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4490: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4500: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4510: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4520: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4530: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4540: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4550: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 4550: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1a5
+# temp_MO_data=1a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4560: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 4560: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1a5
+# temp_MO_data=6a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4570: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4580: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4590: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4600: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4610: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4620: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4630: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4640: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4650: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4660: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4670: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4680: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4690: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4700: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4710: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4720: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4730: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4740: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4750: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 4750: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1ff
+# temp_MO_data=1ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4760: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 4760: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1ff
+# temp_MO_data=600 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4770: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4780: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4790: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4800: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4810: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4820: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4830: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4840: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4850: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4860: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4870: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4880: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4890: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4900: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4910: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4920: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4930: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4940: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4950: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4960: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4970: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4980: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 4990: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5000: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5010: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5020: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5030: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5040: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5050: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5050: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1ff
+# temp_MO_data=1ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5060: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5060: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1ff
+# temp_MO_data=600 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5070: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5080: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5090: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5100: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5110: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5120: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5130: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5140: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5150: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5160: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5170: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5180: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5190: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5190: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 200
+# temp_MO_data=600 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5200: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5200: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 200
+# temp_MO_data=100 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5210: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5220: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5230: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5240: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5250: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5260: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5270: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5280: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5290: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5300: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5310: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5320: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5330: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5340: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5350: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5360: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5370: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5380: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5390: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5400: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5410: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5420: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5430: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5440: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5450: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5450: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5460: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5460: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5470: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5470: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5480: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5480: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5490: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5490: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5500: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5500: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5510: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5510: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5520: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5520: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5530: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5530: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=22
+# cycle_count=22  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5540: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5540: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=23
+# cycle_count=23  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5550: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5550: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5560: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5560: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=6ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5570: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5580: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5590: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5600: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5610: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5620: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5630: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5640: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5650: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5660: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5670: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5680: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5690: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5700: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5710: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5720: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5730: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5740: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5750: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5760: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5760: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1ff
+# temp_MO_data=1ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5770: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5770: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1ff
+# temp_MO_data=6a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5780: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5790: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5800: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5810: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5820: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5830: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5840: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5850: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5860: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5870: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5880: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5890: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5900: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5900: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=6a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5910: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 5910: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=100 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5920: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5930: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5940: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5950: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5960: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5970: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5980: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 5990: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6000: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6010: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6020: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6030: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6040: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6050: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6060: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6070: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6080: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6090: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6100: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6110: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6120: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6130: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6140: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6150: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6160: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6170: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6180: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6190: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6200: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6210: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6220: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6230: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6240: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6250: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6260: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6270: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6280: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6290: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6300: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6310: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6320: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6330: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 6330: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=6a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6340: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 6340: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6350: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6360: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6370: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6380: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6390: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6400: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6410: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6420: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6430: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6440: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6450: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6460: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6470: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 6470: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6480: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 6480: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=7a5 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6490: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6500: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6510: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6520: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6530: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6540: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6550: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=22
+# cycle_count=22  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6560: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=23
+# cycle_count=23  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6570: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6580: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6590: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6600: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6610: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6620: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6630: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6640: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6650: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6660: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6670: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6680: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6690: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6700: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6710: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6720: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 6720: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2ff
+# temp_MO_data=6ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6730: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 6730: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2ff
+# temp_MO_data=100 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6740: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6750: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6760: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6770: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6780: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6790: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6800: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6810: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6820: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6830: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6840: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6850: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6860: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 6860: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 100
+# temp_MO_data=100 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6870: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 6870: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 100
+# temp_MO_data=ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6880: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6890: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6900: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6910: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6920: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6930: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6940: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6950: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6960: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6970: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6980: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 6990: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=ff cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7000: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 7000: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: ff
+# temp_MO_data=ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7010: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 7010: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: ff
+# temp_MO_data=100 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7020: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7030: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7040: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7050: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7060: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7070: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7080: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7090: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7100: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7110: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7120: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7130: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7140: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 7140: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 100
+# temp_MO_data=100 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7150: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 7150: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 100
+# temp_MO_data=6ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7160: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7170: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7180: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7190: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7200: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7210: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7220: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7230: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7240: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7250: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7260: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7270: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7280: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7290: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7300: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7310: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7320: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7330: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7340: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 7340: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1ff
+# temp_MO_data=1ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7350: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 7350: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1ff
+# temp_MO_data=0 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7360: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7370: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7380: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7390: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7400: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7410: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7420: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7430: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7440: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7450: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7460: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7470: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7480: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 7480: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 0
+# temp_MO_data=0 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7490: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 7490: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 0
+# temp_MO_data=1a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7500: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7510: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7520: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7530: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7540: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7550: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7560: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7570: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7580: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7590: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7600: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7610: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7620: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7630: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7640: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7650: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7660: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7670: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7680: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7690: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7700: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 7700: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 200
+# temp_MO_data=600 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7710: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 7710: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 200
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7720: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7730: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7740: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7750: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7760: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7770: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7780: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7790: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7800: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7810: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7820: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7830: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7840: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7850: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7860: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7870: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7880: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7890: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7900: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=700 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7910: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7920: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7930: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7940: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7950: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7960: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7970: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7980: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 7990: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8000: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8010: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8020: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8030: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8040: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8040: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=6a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8050: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8050: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=1a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8060: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8070: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8080: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8090: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8100: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8110: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8120: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8130: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8140: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8150: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8160: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8170: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8180: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8180: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1a5
+# temp_MO_data=1a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8190: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8190: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 1a5
+# temp_MO_data=6a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8200: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8210: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8220: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8230: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8240: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8250: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8260: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8270: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8280: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8290: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8300: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8310: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8320: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8330: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8340: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8350: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8360: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8370: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8380: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8390: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8400: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8410: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8420: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8420: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8430: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8430: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8440: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8440: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8450: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8450: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8460: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8460: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8470: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8470: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8480: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8480: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8490: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8490: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8500: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8500: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=22
+# cycle_count=22  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8510: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8510: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=23
+# cycle_count=23  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8520: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8520: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8530: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8530: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=600 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8540: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8550: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8560: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8570: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=600 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8580: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8590: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8600: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8610: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8620: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8630: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8640: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8650: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8660: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8670: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8680: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8690: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8700: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8710: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8710: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8720: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8720: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8730: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8730: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8740: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8740: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8750: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8750: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8760: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8760: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8770: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8770: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8780: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8780: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8790: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8790: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=22
+# cycle_count=22  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8800: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8800: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=23
+# cycle_count=23  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8810: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8810: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8820: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8820: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=6ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8830: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8840: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8850: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8860: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8870: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8880: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8890: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8900: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8910: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8920: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8930: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8940: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=6ff cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8950: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8950: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2ff
+# temp_MO_data=6ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8960: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 8960: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2ff
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8970: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8980: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 8990: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9000: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9010: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9020: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9030: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9040: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9050: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9060: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9070: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9080: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9090: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9090: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9100: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9100: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=7a5 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9110: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9120: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9130: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9140: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9150: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9160: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9170: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=22
+# cycle_count=22  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9180: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=23
+# cycle_count=23  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9190: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9200: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9200: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 2a5
+# temp_MO_data=a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9210: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9220: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9230: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9240: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9250: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9260: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9270: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9280: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9290: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9300: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9310: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9320: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9330: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9340: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9350: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9360: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9370: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9380: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9390: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=1ff cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9400: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9410: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9420: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9430: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9440: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9450: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9460: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9470: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9480: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9490: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9500: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9510: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9520: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9530: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9530: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: a5
+# temp_MO_data=a5 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9540: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9540: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: a5
+# temp_MO_data=100 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9550: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9560: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9570: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9580: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9590: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9600: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9610: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9620: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9630: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9640: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9650: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=100 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9660: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9670: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9680: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9690: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9700: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9710: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9720: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9730: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9740: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9750: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9760: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9770: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9780: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=0 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9790: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9790: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 0
+# temp_MO_data=0 cycle_count=0
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9800: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9800: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 0
+# temp_MO_data=7a5 cycle_count=1
+# cycle_count=1  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9810: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=2
+# cycle_count=2  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9820: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=3
+# cycle_count=3  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9830: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=4
+# cycle_count=4  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9840: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=5
+# cycle_count=5  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9850: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=6
+# cycle_count=6  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9860: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=7
+# cycle_count=7  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9870: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=8
+# cycle_count=8  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9880: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=9
+# cycle_count=9  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9890: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=10
+# cycle_count=10  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9900: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=11
+# cycle_count=11  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9910: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=12
+# cycle_count=12  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9920: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 0
+# temp_MO_data=7a5 cycle_count=13
+# cycle_count=13  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9930: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9930: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=14
+# cycle_count=14  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9940: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9940: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=15
+# cycle_count=15  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9950: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9950: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=16
+# cycle_count=16  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9960: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9960: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=17
+# cycle_count=17  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9970: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9970: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=18
+# cycle_count=18  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9980: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9980: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=19
+# cycle_count=19  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 9990: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 9990: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=20
+# cycle_count=20  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 10000: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 10000: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# temp_MO_data=7a5 cycle_count=21
+# cycle_count=21  SS_n = 0;
+# UVM_INFO SPI_slave_scoreboard.sv(40) @ 10010: uvm_test_top.env.sb [SCOREBOARD] rx_valid matches: 1
+# UVM_INFO SPI_slave_scoreboard.sv(47) @ 10010: uvm_test_top.env.sb [SCOREBOARD] rx_data matches: 3a5
+# UVM_INFO SPI_slave_test.sv(45) @ 10010: uvm_test_top [RUN_PHASE] Test finished
+# UVM_INFO SPI_slave_test.sv(46) @ 10010: uvm_test_top [RUN_PHASE] Total errors: 0
+# UVM_INFO SPI_slave_test.sv(47) @ 10010: uvm_test_top [RUN_PHASE] Total correct: 173
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 10010: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO : 1184
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [RUN_PHASE]     5
+# [SCOREBOARD]  1174
+# [TEST_DONE]     1
+# [coverage]     1
+# ** Note: $finish    : F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 10010 ns  Iteration: 61  Instance: /top
+# Break in Task uvm_pkg/uvm_root::run_test at F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (F:/MOHAMMED ESSAM/Digital/verification/projects/UVM Project/SPI_slave/SPI_slave.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (F:/MOHAMMED ESSAM/Digital/verification/projects/UVM Project/SPI_slave/SPI_slave.mpf).  File can not be renamed.
+# End time: 22:50:47 on Oct 14,2025, Elapsed time: 0:06:02
+# Errors: 2, Warnings: 2

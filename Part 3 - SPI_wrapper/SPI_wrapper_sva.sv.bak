@@ -1,0 +1,13 @@
+
+
+import SPI_wrapper_shared_pkg::*;
+module SPI_wrapper_sva(SPI_wrapper_if.DUT SPI_wrapperif);
+
+
+  reset_a :assert property (@(posedge SPI_wrapperif.clk) !SPI_wrapperif.rst_n |-> ##1 !MISO && !SPI_wrapperif.rx_valid &&SPI_wrapperif.rx_valid==0);
+
+
+  MISO_stable_a: assert property (@(posedge SPI_wrapperif.clk) disable iff (!SPI_wrapperif.rst_n)
+    $fell (SPI_wrapperif.SS_n)|=>[*13]$stable(SPI_wrapperif.MISO));
+
+endmodule

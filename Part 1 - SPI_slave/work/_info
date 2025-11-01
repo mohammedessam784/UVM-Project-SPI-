@@ -1,0 +1,905 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dF:/MOHAMMED ESSAM/Digital/verification/projects/Synchronous FIFO
+T_opt
+!s11d Project/SPI_slave/work F:/MOHAMMED 1 Project/SPI_slave/work 1 F:/MOHAMMED 
+Z2 !s11d 1 F:/MOHAMMED 1 ESSAM/Digital/verification/projects/UVM 1 F:/MOHAMMED 
+Z3 !s11d F:/MOHAMMED ESSAM/Digital/verification/projects/UVM 1 Project/SPI_slave/work 1 SPI_slave_if 
+!s11d ESSAM/Digital/verification/projects/UVM Project/SPI_slave/work 1 SPI_slave_test_pkg 1 Project/SPI_slave/work 
+Z4 !s11d ESSAM/Digital/verification/projects/UVM Project/SPI_slave/work 1 SPI_slave_if 1 F:/MOHAMMED 
+!s11d Project/SPI_slave/work SPI_slave_monitor_pkg 1 F:/MOHAMMED 1 SPI_slave_monitor_pkg 
+R2
+R3
+!s11d ESSAM/Digital/verification/projects/UVM Project/SPI_slave/work 1 SPI_slave_driver_pkg 1 Project/SPI_slave/work 
+R4
+!s11d SPI_slave_config_pkg F:/MOHAMMED 0 
+!s110 1760470301
+VmFXF30O59Gi6mj9<m^>^Z1
+04 3 4 work top fast 0
+=1-204747e02961-68eea51b-2fc-20f8
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z5 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+R1
+vSLAVE
+Z6 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z7 !s110 1760471084
+!i10b 1
+!s100 ]A1cIkGP_k1c3[aB<[?oe0
+IKOeT4JGSP>b9fnFnzkg[B3
+S1
+Z8 dF:/MOHAMMED ESSAM/Digital/verification/projects/UVM Project/SPI_slave
+w1760465360
+8SPI_slave.sv
+FSPI_slave.sv
+!i122 304
+L0 1 209
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z11 !s108 1760471084.000000
+!s107 F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|top.sv|XXX_uvm_env_template.sv|SPI_slave_test.sv|SPI_slave_sva.sv|SPI_slave_shared.sv|SPI_slave_sequencer.sv|SPI_slave_seq_item.sv|SPI_slave_scoreboard.sv|SPI_slave_rst_seq.sv|SPI_slave_monitor.sv|SPI_slave_main_seq.sv|SPI_slave_if.sv|SPI_slave_env.sv|SPI_slave_driver.sv|SPI_slave_coverage.sv|SPI_slave_config.sv|SPI_slave_agent.sv|SPI_slave.sv|SPI_Slave_Golden.sv|
+Z12 !s90 -reportprogress|300|+define+SIM|+cover|SPI_Slave_Golden.sv|SPI_slave.sv|SPI_slave_agent.sv|SPI_slave_config.sv|SPI_slave_coverage.sv|SPI_slave_driver.sv|SPI_slave_env.sv|SPI_slave_if.sv|SPI_slave_main_seq.sv|SPI_slave_monitor.sv|SPI_slave_rst_seq.sv|SPI_slave_scoreboard.sv|SPI_slave_seq_item.sv|SPI_slave_sequencer.sv|SPI_slave_shared.sv|SPI_slave_sva.sv|SPI_slave_test.sv|XXX_uvm_env_template.sv|top.sv|
+!i113 0
+Z13 !s102 +cover
+Z14 o+cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z15 !s92 +define+SIM +cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+n@s@l@a@v@e
+XSPI_slave_agent_pkg
+R6
+Z16 DXx6 mtiUvm 7 uvm_pkg 0 22 8V[`8]Q0W57le7Z>zYaAj1
+Z17 DXx4 work 20 SPI_slave_config_pkg 0 22 _6RXJ8S>^l5k`XhW^W8C^0
+Z18 DXx4 work 20 SPI_slave_shared_pkg 0 22 `Lc5YHB[mQ1i7ck]Vc:[L3
+Z19 DXx4 work 22 SPI_slave_seq_item_pkg 0 22 70dHiRE6=8ZaG=MOzceh90
+Z20 DXx4 work 20 SPI_slave_driver_pkg 0 22 G2k[LmK^`nhRz7JSU4W8Z1
+Z21 DXx4 work 21 SPI_slave_monitor_pkg 0 22 GJZ2YF<:h9`QamUNeNbRb3
+Z22 DXx4 work 23 SPI_slave_sequencer_pkg 0 22 <5lVLaoKO1jOF3T<XD0Ib0
+Z23 !s110 1760471085
+!i10b 1
+!s100 DGMPHVRB?4M<lU^GkXGM;2
+IS[AOz1VQ7zV0LV5SgKY`93
+S1
+R8
+w1760051446
+8SPI_slave_agent.sv
+FSPI_slave_agent.sv
+Z24 FF:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
+Z25 FF:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh
+Z26 FF:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh
+Z27 FF:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh
+Z28 FF:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh
+Z29 FF:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh
+Z30 FF:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh
+Z31 FF:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh
+Z32 FF:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh
+Z33 FF:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh
+Z34 FF:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh
+Z35 FF:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh
+!i122 304
+Z36 L0 1 0
+VS[AOz1VQ7zV0LV5SgKY`93
+R10
+r1
+!s85 0
+31
+R11
+Z37 !s107 F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|F:/MOHAMMED ESSAM/Digital/Design/tools/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|top.sv|XXX_uvm_env_template.sv|SPI_slave_test.sv|SPI_slave_sva.sv|SPI_slave_shared.sv|SPI_slave_sequencer.sv|SPI_slave_seq_item.sv|SPI_slave_scoreboard.sv|SPI_slave_rst_seq.sv|SPI_slave_monitor.sv|SPI_slave_main_seq.sv|SPI_slave_if.sv|SPI_slave_env.sv|SPI_slave_driver.sv|SPI_slave_coverage.sv|SPI_slave_config.sv|SPI_slave_agent.sv|SPI_slave.sv|SPI_Slave_Golden.sv|
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_agent_pkg
+XSPI_slave_config_pkg
+Z38 !s115 SPI_slave_if
+R6
+R16
+R23
+!i10b 1
+!s100 RMek32:fimWecjzE^>a==2
+I_6RXJ8S>^l5k`XhW^W8C^0
+S1
+R8
+w1760012495
+8SPI_slave_config.sv
+FSPI_slave_config.sv
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+R31
+R32
+R33
+R34
+R35
+!i122 304
+R36
+V_6RXJ8S>^l5k`XhW^W8C^0
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_config_pkg
+XSPI_slave_coverage_pkg
+R6
+R16
+R18
+R19
+R23
+!i10b 1
+!s100 dA5L4kJ9N<DCiof?cjM5J2
+IQ9=OMKziRnaJ]=MJgONbi0
+S1
+R8
+w1760055552
+8SPI_slave_coverage.sv
+FSPI_slave_coverage.sv
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+R31
+R32
+R33
+R34
+R35
+!i122 304
+R36
+VQ9=OMKziRnaJ]=MJgONbi0
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_coverage_pkg
+XSPI_slave_driver_pkg
+R38
+R6
+R16
+R18
+R19
+R17
+R23
+!i10b 1
+!s100 =j?hTBPa?PY?<d0n7g0a[2
+IG2k[LmK^`nhRz7JSU4W8Z1
+S1
+R8
+w1760044752
+8SPI_slave_driver.sv
+FSPI_slave_driver.sv
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+R31
+R32
+R33
+R34
+R35
+!i122 304
+R36
+VG2k[LmK^`nhRz7JSU4W8Z1
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_driver_pkg
+XSPI_slave_env_pkg
+R6
+R16
+R17
+R18
+R19
+R20
+R21
+R22
+Z39 DXx4 work 19 SPI_slave_agent_pkg 0 22 S[AOz1VQ7zV0LV5SgKY`93
+Z40 DXx4 work 24 SPI_slave_scoreboard_pkg 0 22 koQj=e_U7UiHEQGkIF2l>2
+Z41 DXx4 work 22 SPI_slave_coverage_pkg 0 22 Q9=OMKziRnaJ]=MJgONbi0
+R23
+!i10b 1
+!s100 U^K=8oDIVMEToh_m6GA920
+ImamzVEG`>8<1L=o>[iJkY0
+S1
+R8
+w1760020630
+8SPI_slave_env.sv
+FSPI_slave_env.sv
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+R31
+R32
+R33
+R34
+R35
+!i122 304
+R36
+VmamzVEG`>8<1L=o>[iJkY0
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_env_pkg
+vSPI_Slave_Golden
+R6
+R7
+!i10b 1
+!s100 ZbiS3JOd1BdQ@3JTEg]_j3
+IbMCj<Z=N=GC8gPFoE`VgF3
+S1
+R8
+w1760381792
+8SPI_Slave_Golden.sv
+FSPI_Slave_Golden.sv
+!i122 304
+L0 3 151
+R9
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_@slave_@golden
+YSPI_slave_if
+R6
+R23
+!i10b 1
+!s100 JPRW:@FHR4PQneo0hOYZh2
+IeKkPW2fO_SE^J?Heek0BW0
+S1
+R8
+w1760460490
+8SPI_slave_if.sv
+FSPI_slave_if.sv
+!i122 304
+R36
+R9
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_if
+XSPI_slave_main_seq_pkg
+R6
+R16
+R18
+R19
+R23
+!i10b 1
+!s100 <Hd9Wd6Y6m01=oR1hYe3a0
+I:d<EbDPTH3=W0=;c]UH:43
+S1
+R8
+w1760095019
+8SPI_slave_main_seq.sv
+FSPI_slave_main_seq.sv
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+R31
+R32
+R33
+R34
+R35
+!i122 304
+R36
+V:d<EbDPTH3=W0=;c]UH:43
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_main_seq_pkg
+XSPI_slave_monitor_pkg
+R38
+R6
+R16
+R18
+R19
+R23
+!i10b 1
+!s100 ^5lk:jni7Y]B`1:DLOO>X3
+IGJZ2YF<:h9`QamUNeNbRb3
+S1
+R8
+w1760469734
+8SPI_slave_monitor.sv
+FSPI_slave_monitor.sv
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+R31
+R32
+R33
+R34
+R35
+!i122 304
+R36
+VGJZ2YF<:h9`QamUNeNbRb3
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_monitor_pkg
+XSPI_slave_rst_seq_pkg
+R6
+R16
+R18
+R19
+R23
+!i10b 1
+!s100 QSY7i6PEAE3]BjI568?7W3
+I[VEohGRYnVcLo[zbHjJ_13
+S1
+R8
+w1760015138
+8SPI_slave_rst_seq.sv
+FSPI_slave_rst_seq.sv
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+R31
+R32
+R33
+R34
+R35
+!i122 304
+R36
+V[VEohGRYnVcLo[zbHjJ_13
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_rst_seq_pkg
+XSPI_slave_scoreboard_pkg
+R6
+R16
+R18
+R19
+R23
+!i10b 1
+!s100 7]QAU1ZMI>FD3:RDN<LF@0
+IkoQj=e_U7UiHEQGkIF2l>2
+S1
+R8
+w1760470142
+8SPI_slave_scoreboard.sv
+FSPI_slave_scoreboard.sv
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+R31
+R32
+R33
+R34
+R35
+!i122 304
+R36
+VkoQj=e_U7UiHEQGkIF2l>2
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_scoreboard_pkg
+XSPI_slave_seq_item_pkg
+R6
+R16
+R18
+R23
+!i10b 1
+!s100 7;]cIk9>U^1cR]IXMbS281
+I70dHiRE6=8ZaG=MOzceh90
+S1
+R8
+w1760469629
+8SPI_slave_seq_item.sv
+FSPI_slave_seq_item.sv
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+R31
+R32
+R33
+R34
+R35
+!i122 304
+R36
+V70dHiRE6=8ZaG=MOzceh90
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_seq_item_pkg
+XSPI_slave_sequencer_pkg
+R6
+R16
+R18
+R19
+R23
+!i10b 1
+!s100 hRO2jO6f4JK:b>F7B2MS30
+I<5lVLaoKO1jOF3T<XD0Ib0
+S1
+R8
+w1760015556
+8SPI_slave_sequencer.sv
+FSPI_slave_sequencer.sv
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+R31
+R32
+R33
+R34
+R35
+!i122 304
+R36
+V<5lVLaoKO1jOF3T<XD0Ib0
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_sequencer_pkg
+XSPI_slave_shared_pkg
+R6
+R23
+!i10b 1
+!s100 NjO<kc2?eaGICI]MYbA?N1
+I`Lc5YHB[mQ1i7ck]Vc:[L3
+S1
+R8
+w1760470052
+8SPI_slave_shared.sv
+FSPI_slave_shared.sv
+!i122 304
+R36
+V`Lc5YHB[mQ1i7ck]Vc:[L3
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_shared_pkg
+vSPI_slave_sva
+R6
+R6
+R18
+DXx4 work 21 SPI_slave_sva_sv_unit 0 22 dJCBW3>6Khik=hM2HbCmE2
+R23
+R9
+r1
+!s85 0
+!i10b 1
+!s100 7Sl]<ZJGPc:EM[=?85A^o3
+IVKXRdVz@4K_@cUA2SU`UW1
+!s105 SPI_slave_sva_sv_unit
+S1
+R8
+Z42 w1760024069
+Z43 8SPI_slave_sva.sv
+Z44 FSPI_slave_sva.sv
+!i122 304
+L0 2 4
+R10
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_sva
+XSPI_slave_sva_sv_unit
+R6
+R6
+R18
+R23
+VdJCBW3>6Khik=hM2HbCmE2
+r1
+!s85 0
+!i10b 1
+!s100 e1UfD27<R5?6XZGZ^C6YC2
+IdJCBW3>6Khik=hM2HbCmE2
+!i103 1
+S1
+R8
+R42
+R43
+R44
+!i122 304
+R36
+R10
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_sva_sv_unit
+XSPI_slave_test_pkg
+R38
+R6
+R6
+R16
+R17
+R18
+R19
+R20
+R21
+R22
+R39
+R40
+R41
+Z45 DXx4 work 17 SPI_slave_env_pkg 0 22 mamzVEG`>8<1L=o>[iJkY0
+Z46 DXx4 work 22 SPI_slave_main_seq_pkg 0 22 :d<EbDPTH3=W0=;c]UH:43
+Z47 DXx4 work 21 SPI_slave_rst_seq_pkg 0 22 [VEohGRYnVcLo[zbHjJ_13
+R23
+!i10b 1
+!s100 d^9oP2LN:C@3bza7ANLzN2
+ISiB[9XR6QD>oWKY6]:o>d1
+S1
+R8
+w1760470229
+8SPI_slave_test.sv
+FSPI_slave_test.sv
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+R31
+R32
+R33
+R34
+R35
+!i122 304
+R36
+VSiB[9XR6QD>oWKY6]:o>d1
+R10
+r1
+!s85 0
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+n@s@p@i_slave_test_pkg
+vtop
+R6
+R6
+R16
+R6
+R17
+R18
+R19
+R20
+R21
+R22
+R39
+R40
+R41
+R45
+R46
+R47
+Z48 DXx4 work 18 SPI_slave_test_pkg 0 22 SiB[9XR6QD>oWKY6]:o>d1
+DXx4 work 11 top_sv_unit 0 22 _KS]4[]_:VOMDl=DjcU_l1
+R23
+R9
+r1
+!s85 0
+!i10b 1
+!s100 Z^0^G]H@@^GbT0]<zT@8F1
+II0JL7bEU2g9WaaHLhG[aK2
+!s105 top_sv_unit
+S1
+R8
+Z49 w1760460286
+Z50 8top.sv
+Z51 Ftop.sv
+!i122 304
+L0 7 31
+R10
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
+Xtop_sv_unit
+R6
+R6
+R16
+R6
+R17
+R18
+R19
+R20
+R21
+R22
+R39
+R40
+R41
+R45
+R46
+R47
+R48
+R23
+V_KS]4[]_:VOMDl=DjcU_l1
+r1
+!s85 0
+!i10b 1
+!s100 k]^7E64<[nkQ_RcI8OanN1
+I_KS]4[]_:VOMDl=DjcU_l1
+!i103 1
+S1
+R8
+R49
+R50
+R51
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+R31
+R32
+R33
+R34
+R35
+!i122 304
+L0 2 0
+R10
+31
+R11
+R37
+R12
+!i113 0
+R13
+R14
+R15
+R5
